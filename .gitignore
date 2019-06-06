@@ -1,0 +1,8 @@
+ignore/**
+data/**
+trained_lstm/**
+ipynb_checkpoints/**
+.ipynb_checkpoints/**
+__pycache__/**
+output_data/**
+sed_main.html
