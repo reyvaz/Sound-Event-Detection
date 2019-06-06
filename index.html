@@ -13131,7 +13131,7 @@ h3, h4 {
 }    
 </style><p style="font-size:2.7em;color:#000099;font-weight: bold">Sound Event Detection</p><p><strong>Reynaldo Vazquez</strong><br>
 <strong>June, 2019</strong><br>
-<a href="https://github.com/reyvaz/sound-event-detection">GitHub Repo</a></p>
+<a href="https://github.com/reyvaz/Sound-Event-Detection">GitHub Repo</a></p>
 <p><br></p>
 <p>This project builds an algorithm that automatically detects the occurrence of a sound event and its onset. An LSTM-based system that uses transformations of the mel spectrogram is able to achieve this with an event-based error rate of 0.06 and a F1-score of 0.97.</p>
 <p><img src="media/pow-1601674_640.png" style="width:350px;height:250px;padding:5px" align="right"></p>
@@ -13148,7 +13148,7 @@ h3, h4 {
 <p>Thus, monitoring for some sound events may be a good practice from a safety or security perspective, and automated monitoring may the be most efficient.</p>
 <p>This project is inspired by <a href="http://www.cs.tut.fi/sgn/arg/dcase2017/challenge/task-rare-sound-event-detection">Task 2: Detection of rare sound events of DCASE17</a> challenge. What differentiates this project from DCASE17's challenge is the introduction of confusing events in the audioset. In other words, this project builds a system that not only detects the occurrence of and event and its onset, but it discriminates between different types of events. The sound event to be detected is the occurrence of a glass break.</p>
 <h2>Data</h2><p>Artificial sound mixes were created using background and event audio recordings from Tampere University's Detection and Classification of Acoustic Scenes and Events (DCASE) Community.</p>
-<p>The created artificial audio dataset and meta data can be found <a href="zenodo_link">here</a>.</p>
+<p>The created artificial audio dataset and meta data can be found <a href="https://zenodo.org/record/3236975#.XPSRDdNKjgt">here</a>.</p>
 <p>The source data can be found <a href="http://www.cs.tut.fi/sgn/arg/dcase2017/challenge/task-rare-sound-event-detection#audio-dataset">here</a>.</p>
 <p><strong>Created artificial sound mixes are 10 seconds long and contain:</strong></p>
 <ul>
@@ -13171,7 +13171,7 @@ h3, h4 {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">io</span><span class="o">,</span> <span class="nn">h5py</span><span class="o">,</span> <span class="nn">IPython</span><span class="o">,</span> <span class="nn">dcase_util</span><span class="o">,</span> <span class="nn">sed_eval</span>
@@ -13196,6 +13196,24 @@ h3, h4 {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>Using TensorFlow backend.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13207,7 +13225,7 @@ h3, h4 {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">track_dur</span> <span class="o">=</span> <span class="mf">10.0</span>
@@ -13255,13 +13273,32 @@ h3, h4 {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sed_utils</span> <span class="k">import</span> <span class="o">*</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/anaconda3/lib/python3.7/site-packages/pydub/utils.py:165: RuntimeWarning: Couldn&#39;t find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+  warn(&#34;Couldn&#39;t find ffmpeg or avconv - defaulting to ffmpeg, but may not work&#34;, RuntimeWarning)
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -13275,7 +13312,7 @@ h3, h4 {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">zip_train</span> <span class="o">=</span> <span class="n">ZipFile</span><span class="p">(</span><span class="s1">&#39;data/mixes_train.zip&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>  
@@ -13296,7 +13333,7 @@ h3, h4 {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">meta_train_track</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
@@ -13312,7 +13349,7 @@ h3, h4 {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[7]:</div>
+    <div class="prompt output_prompt">Out[5]:</div>
 
 
 
@@ -13384,7 +13421,7 @@ h3, h4 {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">meta_train_segments</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
@@ -13400,7 +13437,7 @@ h3, h4 {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[8]:</div>
+    <div class="prompt output_prompt">Out[6]:</div>
 
 
 
@@ -13483,7 +13520,7 @@ h3, h4 {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">show_audio_info</span><span class="p">(</span><span class="n">zip_train</span><span class="p">,</span> <span class="mi">10039</span><span class="p">,</span> <span class="n">meta_train_segments</span><span class="p">,</span> <span class="n">prefix_train</span><span class="p">)</span>
@@ -13540,7 +13577,7 @@ glassbreak                  6.39              9.39
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[9]:</div>
+    <div class="prompt output_prompt">Out[7]:</div>
 
 
 
@@ -13568,7 +13605,7 @@ glassbreak                  6.39              9.39
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">show_audio_info</span><span class="p">(</span><span class="n">zip_train</span><span class="p">,</span> <span class="mi">10004</span><span class="p">,</span> <span class="n">meta_train_segments</span><span class="p">,</span> <span class="n">prefix_train</span><span class="p">)</span>
@@ -13624,7 +13661,7 @@ glassbreak                  7.63              9.37
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[10]:</div>
+    <div class="prompt output_prompt">Out[8]:</div>
 
 
 
@@ -13652,7 +13689,7 @@ glassbreak                  7.63              9.37
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">show_audio_info</span><span class="p">(</span><span class="n">zip_train</span><span class="p">,</span> <span class="mi">10000</span><span class="p">,</span> <span class="n">meta_train_segments</span><span class="p">,</span> <span class="n">prefix_train</span><span class="p">)</span>
@@ -13708,7 +13745,7 @@ gunshot                     5.29              6.85
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[11]:</div>
+    <div class="prompt output_prompt">Out[9]:</div>
 
 
 
@@ -13736,7 +13773,7 @@ gunshot                     5.29              6.85
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">show_audio_info</span><span class="p">(</span><span class="n">zip_train</span><span class="p">,</span> <span class="mi">10022</span><span class="p">,</span> <span class="n">meta_train_segments</span><span class="p">,</span> <span class="n">prefix_train</span><span class="p">)</span>
@@ -13789,7 +13826,7 @@ gunshot                     5.29              6.85
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[12]:</div>
+    <div class="prompt output_prompt">Out[10]:</div>
 
 
 
@@ -13817,7 +13854,7 @@ gunshot                     5.29              6.85
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%capture</span>
@@ -13833,7 +13870,7 @@ gunshot                     5.29              6.85
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">x_names</span> <span class="o">=</span> <span class="p">(</span><span class="n">event_type</span><span class="o">+</span><span class="s1">&#39; occurs&#39;</span><span class="p">,</span> <span class="n">event_type</span><span class="o">+</span><span class="s1">&#39; doesn</span><span class="se">\&#39;</span><span class="s1">t occur&#39;</span><span class="p">)</span>
@@ -13898,7 +13935,7 @@ gunshot                     5.29              6.85
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%capture</span>
@@ -13914,7 +13951,7 @@ gunshot                     5.29              6.85
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">x_names</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;background only&#39;</span><span class="p">,</span> <span class="s1">&#39;positive event&#39;</span><span class="p">,</span> <span class="s1">&#39;negative event&#39;</span><span class="p">)</span>
@@ -13977,7 +14014,7 @@ gunshot                     5.29              6.85
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">path_in_zip</span> <span class="o">=</span> <span class="n">zip_train</span><span class="o">.</span><span class="n">namelist</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span>
@@ -13992,7 +14029,7 @@ gunshot                     5.29              6.85
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Tx</span> <span class="o">=</span> <span class="n">S</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  
@@ -14026,7 +14063,7 @@ n_freq = 128
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_train_mel</span><span class="p">,</span> <span class="n">X_eval_mel</span> <span class="o">=</span> <span class="n">create_or_load_mel_features</span><span class="p">(</span><span class="n">zip_train</span><span class="p">,</span> <span class="n">meta_train_track</span><span class="p">,</span> 
@@ -14041,7 +14078,7 @@ n_freq = 128
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;shape of training features set:&#39;</span><span class="p">,</span> <span class="n">X_train_mel</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
@@ -14081,7 +14118,7 @@ shape of evaluation features set: (500, 862, 128)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">labels_train</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">meta_train_track</span><span class="p">[</span><span class="s1">&#39;class_dummy&#39;</span><span class="p">])</span>
@@ -14098,7 +14135,7 @@ shape of evaluation features set: (500, 862, 128)
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[21]:</div>
+    <div class="prompt output_prompt">Out[19]:</div>
 
 
 
@@ -14115,7 +14152,7 @@ shape of evaluation features set: (500, 862, 128)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">labels_eval</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">meta_eval_track</span><span class="p">[</span><span class="s1">&#39;class_dummy&#39;</span><span class="p">])</span>
@@ -14132,7 +14169,7 @@ shape of evaluation features set: (500, 862, 128)
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[22]:</div>
+    <div class="prompt output_prompt">Out[20]:</div>
 
 
 
@@ -14157,7 +14194,7 @@ shape of evaluation features set: (500, 862, 128)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Y_train</span> <span class="o">=</span> <span class="n">create_labels</span><span class="p">(</span><span class="n">meta_train_track</span><span class="p">,</span> <span class="n">meta_train_segments</span><span class="p">,</span> <span class="n">Ty</span><span class="p">,</span> <span class="n">track_dur_ms</span><span class="p">,</span> 
@@ -14175,7 +14212,7 @@ shape of evaluation features set: (500, 862, 128)
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[23]:</div>
+    <div class="prompt output_prompt">Out[21]:</div>
 
 
 
@@ -14192,7 +14229,7 @@ shape of evaluation features set: (500, 862, 128)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">Y_eval</span> <span class="o">=</span> <span class="n">create_labels</span><span class="p">(</span><span class="n">meta_eval_track</span><span class="p">,</span> <span class="n">meta_eval_segments</span><span class="p">,</span>  <span class="n">Ty</span><span class="p">,</span> <span class="n">track_dur_ms</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> 
@@ -14210,7 +14247,7 @@ shape of evaluation features set: (500, 862, 128)
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[24]:</div>
+    <div class="prompt output_prompt">Out[22]:</div>
 
 
 
@@ -14227,7 +14264,7 @@ shape of evaluation features set: (500, 862, 128)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pos_labels_dev</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">labels_train</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
@@ -14255,7 +14292,7 @@ shape of evaluation features set: (500, 862, 128)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">drop_rate</span> <span class="o">=</span> <span class="mf">0.5</span>
@@ -14308,32 +14345,38 @@ shape of evaluation features set: (500, 862, 128)
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>_________________________________________________________________
+<pre>WARNING:tensorflow:From /anaconda3/lib/python3.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /anaconda3/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:3445: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+_________________________________________________________________
 Layer (type)                 Output Shape              Param #   
 =================================================================
-input_2 (InputLayer)         (None, 862, 128)          0         
+input_1 (InputLayer)         (None, 862, 128)          0         
 _________________________________________________________________
-conv1d_2 (Conv1D)            (None, 212, 128)          262272    
+conv1d_1 (Conv1D)            (None, 212, 128)          262272    
 _________________________________________________________________
-batch_normalization_4 (Batch (None, 212, 128)          512       
+batch_normalization_1 (Batch (None, 212, 128)          512       
 _________________________________________________________________
-activation_2 (Activation)    (None, 212, 128)          0         
+activation_1 (Activation)    (None, 212, 128)          0         
 _________________________________________________________________
-dropout_4 (Dropout)          (None, 212, 128)          0         
+dropout_1 (Dropout)          (None, 212, 128)          0         
 _________________________________________________________________
-bidirectional_3 (Bidirection (None, 212, 128)          98816     
+bidirectional_1 (Bidirection (None, 212, 128)          98816     
 _________________________________________________________________
-dropout_5 (Dropout)          (None, 212, 128)          0         
+dropout_2 (Dropout)          (None, 212, 128)          0         
 _________________________________________________________________
-batch_normalization_5 (Batch (None, 212, 128)          512       
+batch_normalization_2 (Batch (None, 212, 128)          512       
 _________________________________________________________________
-bidirectional_4 (Bidirection (None, 212, 128)          98816     
+bidirectional_2 (Bidirection (None, 212, 128)          98816     
 _________________________________________________________________
-dropout_6 (Dropout)          (None, 212, 128)          0         
+dropout_3 (Dropout)          (None, 212, 128)          0         
 _________________________________________________________________
-batch_normalization_6 (Batch (None, 212, 128)          512       
+batch_normalization_3 (Batch (None, 212, 128)          512       
 _________________________________________________________________
-time_distributed_2 (TimeDist (None, 212, 1)            129       
+time_distributed_1 (TimeDist (None, 212, 1)            129       
 =================================================================
 Total params: 461,569
 Trainable params: 460,801
@@ -14356,10 +14399,10 @@ _________________________________________________________________
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_mel</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span> <span class="n">batch_size</span> <span class="o">=</span> <span class="mi">64</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">verbose</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_mel</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span> <span class="n">batch_size</span> <span class="o">=</span> <span class="mi">64</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">verbose</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14372,13 +14415,26 @@ _________________________________________________________________
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[29]:</div>
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>WARNING:tensorflow:From /anaconda3/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[25]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;keras.callbacks.History at 0x1c9203bda0&gt;</pre>
+<pre>&lt;keras.callbacks.History at 0x1c3478de80&gt;</pre>
 </div>
 
 </div>
@@ -14396,7 +14452,7 @@ _________________________________________________________________
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">raw_preds_eval_mel</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_eval_mel</span><span class="p">)</span>
@@ -14455,7 +14511,7 @@ insertion rate     0.02
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_pred_vs_true</span><span class="p">(</span><span class="n">meta_eval_track</span><span class="p">,</span> <span class="n">Y_eval</span><span class="p">,</span> <span class="n">raw_preds_eval_mel</span><span class="p">,</span> <span class="s1">&#39;evaluation&#39;</span><span class="p">,</span> 
@@ -14508,7 +14564,7 @@ insertion rate     0.02
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_pred_vs_true</span><span class="p">(</span><span class="n">meta_eval_track</span><span class="p">,</span> <span class="n">Y_eval</span><span class="p">,</span> <span class="n">raw_preds_eval_mel</span><span class="p">,</span> <span class="s1">&#39;evaluation&#39;</span><span class="p">,</span> 
@@ -14561,7 +14617,7 @@ insertion rate     0.02
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_pred_vs_true</span><span class="p">(</span><span class="n">meta_eval_track</span><span class="p">,</span> <span class="n">Y_eval</span><span class="p">,</span> <span class="n">raw_preds_eval_mel</span><span class="p">,</span> <span class="s1">&#39;evaluation&#39;</span><span class="p">,</span> 
@@ -14636,6 +14692,19 @@ batch normalization for efficiency and dropout with rate of 0.5 to avoid overfit
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 </div>
     </div>
   </div>

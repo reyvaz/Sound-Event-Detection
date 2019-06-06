@@ -21,8 +21,8 @@ Files:
 The audio data created for this project can be found
 [here](https://zenodo.org/record/3236975#.XPSRDdNKjgt)
 
-[**See the rendered notebook**](https://htmlpreview.github.io/?https://github.com/reyvaz/sound-event-detection/blob/master/sed_main.html)
+[**See the rendered notebook**](https://htmlpreview.github.io/?https://github.com/reyvaz/Sound-Event-Detection/blob/master/sed_main.html)
 
-[**See the rendered html report**](https://reyvaz.github.io/sound-event-detection)
+[**See the rendered html report**](https://reyvaz.github.io/Sound-Event-Detection)
 
 <br>
